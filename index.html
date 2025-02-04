@@ -1,104 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gate3 Security Testing</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="hero-banner">
-      <div class="wrapper">
-        <h4>Elima from <a href="https://ellisdon-blueprints.atlassian.net/wiki/spaces/QAS/pages/587006137/Getting+started+with+Quality+Assurance">QA Team</a> Presents </h4>
-        <h1>Security testing finds &amp; <br /> vulnerabilities to protect systems and data <br /> from threats! </h1>
-        <h3>Burp Suite helps find threats by intercepting &amp; web traffic. <br /> Burp Detects vulnerabilities like XSS and SQL injection. </h3>
-        <a class="cta alt" href="Gate3 Traning">Read More</a>
-      </div>
-      <div class="character1"></div>
-      <div class="character2"></div>
-      <div class="character3"></div>
-    </div>
-    <div id="Gate3 Traning"></div>
-    <nav>
-      <a href="#" class="logo">Gate3 Security Testing</a>
-      <ui>
-        <li>
-          <a href="javascript:" onclick="showPopup();">QUIZ</a>
-        </li>
-        <li>
-          <a href="#Pen Test">Pen Test</a>
-        </li>
-        <li>
-          <a href="#Gate3 Traning">Gate3 Traning</a>
-        </li>
-        </li>
-      </ui>
-    </nav>
-    <div class="Gate3 Traning"></div>
-    <h2>Start our Gate3 Security Traning</h2>
-    <p>Every week, I conduct <span class="highlight">pen-testing training,</span> covering various attack types and real-time scenarios, with all QA team members joining, making it highly effective as we learn pen-testing together At the end of the session, QAs are required to set up a quiz in TestRail to reinforce their learning and assess their understanding. </p>
-    <button class="cta" onclick="showPopup();">QUIZ</button>
-    <div class="sep"></div>
-    <div class="Pen Test" id="Pen Test">
-      <div class="wrapper">
-        <ul class="nb-list">
-          <li class="blue">Broken Access Control</li>
-          <li class="gray">&nbsp;</li>
-          <li class="yellow dragging">Cryptographic Failures</li>
-          <li class="red">Injection</li>
-          <li class="pink">Insecure Design</li>
-          <li class="salmon">Security Misconfiguration</li>
-          <li class="blue">Vulnerable and Outdated Components</li>
-          <li class="yellow">Indentification and Authentication Failures</li>
-        </ul>
-        <h3>Left: Things We Find Important <br /> Below: Pen Testing </h3>
-        <p>Burp Suite is an essential tool for penetration testing, allowing security professionals to intercept, analyze, and modify web traffic.</p>
-        <p>It helps identify vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), and insecure session management.</p>
-        <p>With features like automated scanning and manual testing, Burp Suite enables comprehensive security assessments.</p>
-        <p>By simulating real-world attacks, Burp Suite provides valuable insights to strengthen web application defenses.</p>
-      </div>
-    </div>
-    <div class="sep"></div>
-    <img src="img/Security-Testing.png" width="735" height="399" alt="Security Testing">
-    <footer>
-      <div class="wrapper"> Made by Elima Tripathy from QA TEAM <a href="https://github.com/TripathyElima-Applitools/Gate3-Security-Testing"> GITHUB Repo</a>
-      </div>
-      <div class="popup">
-        <div class="blanket"></div>
-        <div class="content"></div>
-        <button class="close">Close</button>
-      </div>
-    </footer>
-    <div class="popup" id="popup">
-      <div class="blanket"></div>
-      <div class="content">
-        <h2>Fill In Your Details</h2>
-        <form action="">
-          <div class="row">
-            <div class="item">
-              <label>Your First Name</label>
-              <input type="text" placeholder="Awesomeface" value="Shirley">
+    <head>
+        <!-- The character encoding for the webpage -->
+        <meta charset="UTF-8" />
+        <!-- Ensures the page is responsive on different screen sizes -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the page, shown in the browser tab -->
+        <title>Gate3 Security Testing</title>
+        <!-- Link to the external CSS file for styling -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Hero Banner Section (Main introductory section of the page) -->
+        <div class="hero-banner">
+            <div class="wrapper">
+                <!-- Small intro text about the QA team -->
+                <h4>Elima from <a href="https://ellisdon-blueprints.atlassian.net/wiki/spaces/QAS/pages/587006137/Getting+started+with+Quality+Assurance">QA Team</a> Presents</h4>
+                <!-- Main headline describing the purpose of the page -->
+                <h1>
+                    QA security traning <br />
+                    using the awesome tool <br />
+                    Burp Suite &amp; PortSwigger!
+                </h1>
+                <!-- Supporting description of Burp Suite's functionality -->
+                <h3>
+                    Burp Suite helps find threats by intercepting web traffic <br />
+                    &amp; detecting vulnerabilities like XSS &amp; <br />
+                    SQL injection, and more.
+                </h3>
+                <!-- Call-to-action button that links to more information about Gate3 Training -->
+                <a class="cta alt" href="#Gate3 Traning">Read More</a>
             </div>
-            <div class="item">
-              <label>Your Last Name</label>
-              <input type="text" placeholder="Circleface">
+            <!-- Placeholder divs for characters or images that might appear in the banner (styling likely happens here) -->
+            <div class="character1"></div>
+            <div class="character2"></div>
+            <div class="character3"></div>
+        </div>
+
+        <!-- This section corresponds to the "Gate3 Traning" anchor, likely used for navigation -->
+        <div id="Gate3 Traning"></div>
+
+        <!-- Navigation bar for the website -->
+        <nav>
+            <!-- The logo or main link of the site -->
+            <a href="#" class="logo">Gate3 Pen Testing</a>
+
+            <!-- Unordered list for the navigation menu -->
+            <ul>
+                <!-- List item for the "QUIZ" link -->
+                <li>
+                    <!-- This link opens the popup for the quiz form -->
+                    <a href="javascript:" onclick="showPopup();">QUIZ</a>
+                </li>
+
+                <!-- List item for the "PEN TEST" link -->
+                <li>
+                    <!-- This link jumps to the Pen Test section of the page -->
+                    <a href="#PenTest">PEN TEST</a>
+                </li>
+
+                <!-- List item for the "Gate3 Training" link -->
+                <li>
+                    <!-- This link jumps to the Gate3 Training section of the page -->
+                    <a href="#Gate3Training">QA TRAINING</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Gate3 Training Section with a brief description -->
+        <div class="Gate3Training">
+            <div class="wrapper">
+                <h2>Start our Gate3 Traning</h2>
+                <p>Every week, I conduct <span class="highlight">pen-testing training,</span> covering various attack types and real-time scenarios, with all QA team members joining, making it highly effective as we learn pen-testing together.</p>
+                <button class="cta" onclick="showPopup();">QUIZ</button>
             </div>
-          </div>
-          <div class="row">
-            <div class="item">
-              <label>Team Name</label>
-              <input type="text" placeholder="Team 1">
+        </div>
+        <!-- Separator between sections -->
+        <div class="sep"></div>
+
+        <!-- Pen Testing Section with a list of vulnerabilities to be tested -->
+        <div class="Pen Test" id="Pen Test">
+            <div class="wrapper">
+                <!-- List of common vulnerabilities related to pen testing -->
+                <ul class="nb-list">
+                    <li class="blue">Broken Access</li>
+                    <li class="gray">&nbsp;</li>
+                    <li class="yellow dragging">Cryptographic</li>
+                    <li class="red">Injection</li>
+                    <li class="pink">Insecure Design</li>
+                    <li class="salmon">Misconfiguration</li>
+                    <li class="blue">Vulnerable</li>
+                    <li class="yellow">Authentication</li>
+                </ul>
+                <!-- Section heading and description for pen testing -->
+                <h3>
+                    Left: Things We Find Important <br />
+                    Below: Pen Testing
+                </h3>
+                <!-- Descriptive text explaining Burp Suite's importance -->
+                <p>Burp Suite is an essential tool for penetration testing, allowing security professionals to intercept, analyze, and modify web traffic.</p>
+                <p>It helps identify vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), and insecure session management.</p>
+                <p>With features like automated scanning and manual testing, Burp Suite enables comprehensive security assessments.</p>
+                <p>By simulating real-world attacks, Burp Suite provides valuable insights to strengthen web application defenses.</p>
             </div>
-            <div class="item">
-              <label>Module Name</label>
-              <input type="text" placeholder="Communications">
+        </div>
+
+        <!-- Separator between sections -->
+        <div class="sep"></div>
+
+        <!-- Image representing security testing -->
+        <img src="img/Security-Testing.png" width="735" height="399" alt="Security Testing" />
+
+        <!-- Footer Section with creator info and GitHub link -->
+        <footer>
+            <div class="wrapper">Made by Elima Tripathy from QA TEAM <a href="https://github.com/TripathyElima-Applitools/Gate3-Security-Testing"> GITHUB Repo</a></div>
+            <!-- Popup container -->
+            <div class="popup">
+                <div class="blanket"></div>
+                <div class="content"></div>
+                <!-- Button to close the popup -->
+                <button class="close">Close</button>
             </div>
-          </div>
-          <button class="cta">I Want In!</button>
-        </form>
-        <button class="close" onclick="hidePopup();">Close</button>
-      </div>
-    </div>
-    <script src="script.js" type="text/javascript"></script>
-  </body>
+        </footer>
+
+        <!-- Popup for quiz form -->
+        <div class="popup" id="popup">
+            <div class="blanket"></div>
+            <div class="content">
+                <h2>Fill In Your Details</h2>
+                <form action="">
+                    <!-- Row for first name and last name inputs -->
+                    <div class="row">
+                        <div class="item">
+                            <label>Your First Name</label>
+                            <input type="text" placeholder="Awesomeface" value="Shirley" />
+                        </div>
+                        <div class="item">
+                            <label>Your Last Name</label>
+                            <input type="text" placeholder="Circleface" />
+                        </div>
+                    </div>
+                    <!-- Row for team name and module name inputs -->
+                    <div class="row">
+                        <div class="item">
+                            <label>Team Name</label>
+                            <input type="text" placeholder="Team 1" />
+                        </div>
+                        <div class="item">
+                            <label>Module Name</label>
+                            <input type="text" placeholder="Communications" />
+                        </div>
+                    </div>
+                    <!-- Submit button for quiz form -->
+                    <button class="cta">I Want In!</button>
+                </form>
+                <!-- Close button for the popup -->
+                <button class="close" onclick="hidePopup();">Close</button>
+            </div>
+        </div>
+
+        <!-- Linking the JavaScript file to handle dynamic behaviors (like showing and hiding the popup) -->
+        <script src="script.js" type="text/javascript"></script>
+    </body>
 </html>

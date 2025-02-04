@@ -1,3 +1,429 @@
-body{
-    background-color: yellow;
+/* Importing Google Font: Open Sans */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
+/* General styling for body and html */
+body, html {
+    font-family: 'Open Sans', sans-serif; /* Set default font to Open Sans */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Heading styling */
+h1 {
+    font-weight: 800; /* Bold weight */
+    font-size: 50px; /* Large font size */
+}
+
+h2 {
+    font-weight: 800; /* Bold weight */
+    font-size: 50px; /* Large font size */
+}
+
+h3 {
+    font-weight: bold; /* Bold weight */
+    font-size: 30px; /* Medium font size */
+}
+
+h4 {
+    font-weight: bold; /* Bold weight */
+    font-size: 20px; /* Small font size */
+}
+
+p {
+    font-weight: bold; /* Bold weight */
+    font-size: 30px; /* Medium font size */
+    margin: 30px 0; /* Add top and bottom margin */
+}
+
+/* Wrapper container for central alignment */
+.wrapper {
+    width: 960px; /* Fixed width */
+    margin: 0 auto; /* Center align */
+}
+
+/* Hero banner styling */
+.hero-banner {
+    background-color: #007FFF; /* Blue background */
+    min-height: 100vh; /* Full viewport height */
+    padding: 50px 20px; /* Padding around */
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+    position: relative; /* To position child elements absolutely */
+    overflow: hidden; /* Hides overflowing content */
+}
+
+/* Hero banner content alignment */
+.hero-banner .wrapper {
+    height: 464px; /* Fixed height */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    margin-top: -232px; /* Offset to truly center */
+    left: 50%; /* Center horizontally */
+    margin-left: -480px; /* Offset to center */
+}
+
+/* Hero section heading styles */
+.hero-banner h1 {
+    color: white; /* White text */
+    margin: 14px 0 20px; /* Margin around the heading */
+}
+
+.hero-banner h3 {
+    color: white; /* White text */
+    margin: 0 0 35px; /* Margin at bottom */
+}
+
+.hero-banner h4,
+.hero-banner h4 a {
+    color: white; /* White text */
+    margin: 0; /* No margin */
+}
+
+/* Character image positions in hero banner */
+.character1 {
+    background: url(img/character1.png) no-repeat 0 0; /* Character image */
+    background-size: 100%; /* Image size adjusts to container */
+    width: 363px; /* Fixed width */
+    height: 344px; /* Fixed height */
+    position: absolute; top: 10%; right: 10%; /* Positioned in top-right */
+    transform: rotate(15deg); /* Rotate the image */
+}
+
+.character2 {
+    background: url(img/character2.png) no-repeat 0 0; /* Character image */
+    background-size: 100%; /* Image size adjusts to container */
+    width: 309px; /* Fixed width */
+    height: 371px; /* Fixed height */
+    position: absolute; top: 213px; right: 277px; /* Positioned in the middle-right */
+}
+
+.character3 {
+    background: url(img/character3.png) no-repeat 0 0; /* Character image */
+    background-size: 100%; /* Image size adjusts to container */
+    width: 297px; /* Fixed width */
+    height: 286px; /* Fixed height */
+    position: absolute; bottom: 74px; right: 109px; /* Positioned in bottom-right */
+}
+
+/* Styling for call-to-action buttons */
+a.cta,
+button.cta {
+    font-size: 30px; /* Large font size */
+    font-weight: bold; /* Bold font */
+    color: white; /* White text */
+    background: #007FFF; /* Blue background */
+    display: inline-block; /* Inline block */
+    box-shadow: 0 0 0 10px rgba(0,127,255,.15); /* Subtle shadow */
+    padding: 20px 30px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    outline: none; /* Remove outline */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Active state for CTA buttons */
+a.cta:active,
+button.cta:active {
+    opacity: .7; /* Slight opacity change when clicked */
+}
+
+/* Alternative CTA button style */
+a.cta.alt,
+button.cta.alt {
+    background-color: #FFD400; /* Yellow background */
+    color: #111111; /* Dark text */
+    box-shadow: 0 0 0 10px rgba(0,0,0,.15); /* Subtle shadow */
+}
+
+/* Navigation styling */
+nav {
+    height: 100px; /* Fixed height */
+    background-color: white; /* White background */
+    box-shadow: 0 5px 8px rgba(0,0,0,.2); /* Shadow under navbar */
+    position: sticky; /* Sticky navbar */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it's above other content */
+}
+
+/* Logo styling */
+nav .logo {
+    display: block; /* Block level element */
+    width: 300px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    position: absolute; top: 50%; left: 0; /* Positioned to the left */
+    margin-top: -20px; /* Centered vertically */
+    margin-left: 30px; /* Margin on the left */
+    background: url(img/logo.png) no-repeat 0 0; /* Logo image */
+    background-size: 100%; /* Adjust logo size */
+    overflow: hidden; /* Hide anything overflowing */
+    text-indent: -999px; /* Hide the text, used for accessibility */
+}
+
+/* Navigation list styling */
+nav ul {
+    padding: 0; /* Remove padding */
+    margin: 0 20px 0 0; /* Margin on the right */
+}
+
+nav ul li {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    display: block; /* Block display */
+    float: right; /* Float items to the right */
+}
+
+/* Navigation links styling */
+nav ul li a {
+    display: block; /* Block level for full width */
+    height: 100%; /* Full height */
+    box-sizing: border-box; /* Ensure padding/border are included */
+    font-size: 30px; /* Large font */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold font */
+    color: #111111; /* Dark text */
+    text-decoration: none; /* Remove underline */
+    padding: 35px 10px; /* Padding inside links */
+    line-height: 30px; /* Adjust line height */
+}
+
+/* More info section styling */
+.Gate3Training {
+    text-align: center; /* Center text */
+}
+
+.Gate3Training p {
+    margin: 18px 0 35px; /* Margin above and below text */
+}
+
+.Gate3Training h2 {
+    margin: 50px 0 0; /* Margin around the heading */
+}
+
+/* Highlighted text styling */
+.highlight {
+    background-color: #FFADF9; /* Light pink background */
+    color: #FF3300; /* Red text */
+    padding: 5px 10px; /* Padding around the text */
+    line-height: 50px; /* Vertical centering */
+    display: inline; /* Inline display */
+    font-weight: 800; /* Bold font */
+}
+
+/* Separator line styling */
+.sep {
+    width: 470px; /* Fixed width */
+    height: 10px; /* Height of the line */
+    background-color: #111111; /* Dark color for separator */
+    margin: 70px auto; /* Center and add margin */
+}
+
+/* Styling for pen test list items */
+.nb-list {
+    width: 470px; /* Fixed width */
+    padding: 20px 20px 0 20px; /* Padding inside list */
+    box-sizing: border-box; /* Ensure padding/border are included */
+    background-color: #EDEDED; /* Light gray background */
+    float: left; /* Float to the left */
+    margin: 0 20px 20px 0; /* Margin around the list */
+    position: relative; /* Positioning relative for child elements */
+}
+
+/* List item styling for each vulnerability */
+.nb-list li {
+    height: 70px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 40px; /* Large text */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+    display: block; /* Block display */
+    margin-bottom: 20px; /* Margin at bottom */
+    padding: 6px 20px; /* Padding around the list items */
+    box-sizing: border-box; /* Include padding in size */
+}
+
+/* Different background colors for list items */
+.nb-list li.red {
+    background-color: #FF3300; /* Red */
+}
+
+.nb-list li.blue {
+    background-color: #007FFF; /* Blue */
+}
+
+/* Style for blue list items in .nb-list */
+.nb-list li.blue {
+    background-color: #007FFF; /* Blue */
+}
+
+/* Style for gray list items in .nb-list */
+.nb-list li.gray {
+    background-color: rgba(0,0,0, .1); /* Light gray with 10% opacity */
+}
+
+/* Style for yellow list items in .nb-list */
+.nb-list li.yellow {
+    background-color: #FFD400; /* Yellow */
+    color: #111111; /* Dark text color for contrast */
+}
+
+/* Style for pink list items in .nb-list */
+.nb-list li.pink {
+    background-color: #FFADF9; /* Pink */
+}
+
+/* Style for salmon-colored list items in .nb-list */
+.nb-list li.salmon {
+    background-color: #FA8072; /* Salmon color */
+}
+
+/* Style for items being dragged in .nb-list */
+.nb-list li.dragging {
+    position: absolute; /* Position relative to parent */
+    top: 70px; /* Move the item down */
+    left: 70px; /* Move the item right */
+    right: -30px; /* Push the item slightly out */
+    transform: rotate(6deg); /* Slight rotation for visual effect */
+    box-shadow: 0 2px 14px rgba(0,0,0,.3); /* Shadow effect around dragging item */
+}
+
+/* Adds a custom "hand" image to the dragging list item */
+.nb-list li.dragging:after {
+    content: ''; /* Empty content */
+    display: block; /* Make the pseudo-element block-level */
+    position: absolute; /* Position relative to the list item */
+    width: 54px; /* Width of the hand image */
+    height: 60px; /* Height of the hand image */
+    background: url(img/hand.png) no-repeat 0 0; /* Hand icon image */
+    background-size: 100%; /* Scale the image to fit */
+    bottom: -30px; /* Position it below the list item */
+    left: 60%; /* Position it to the right side of the list item */
+}
+
+/* Center align the gang image */
+.gang-img {
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Style for footer */
+footer {
+    text-align: center; /* Center the text */
+    color: rgba(0,0,0, .4); /* Light black color */
+    font-size: 20px; /* Set font size */
+    margin: 85px 0 45px; /* Margin for top and bottom */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Style for footer links */
+footer a {
+    color: rgba(0,0,0, .4); /* Light black color */
+}
+
+/* Style for popup window (initially hidden) */
+.popup {
+    display: none; /* Hide the popup initially */
+    position: fixed; /* Position fixed on screen */
+    top: 0; /* Align with the top of the screen */
+    bottom: 0; /* Align with the bottom of the screen */
+    right: 0; /* Align with the right of the screen */
+    left: 0; /* Align with the left of the screen */
+    z-index: 2; /* Make sure it's above other elements */
+}
+
+/* When the popup is shown, set display to block */
+.popup.show {
+    display: block;
+}
+
+/* Style for the semi-transparent background of the popup */
+.popup .blanket {
+    background-color: rgba(0,0,0,.7); /* Dark overlay */
+    position: absolute; /* Position relative to the popup */
+    top: 0; bottom: 0; right: 0; left: 0; /* Cover the whole screen */
+}
+
+/* Style for the content inside the popup */
+.popup .content {
+    box-sizing: border-box; /* Include padding in width/height */
+    padding: 30px 40px; /* Padding inside the popup */
+    width: 960px; /* Set width of the popup */
+    height: 500px; /* Set height of the popup */
+    background-color: white; /* White background */
+    text-align: center; /* Center text inside popup */
+    position: absolute; /* Absolute positioning inside the screen */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    margin-top: -250px; /* Offset by half of its height */
+    margin-left: -480px; /* Offset by half of its width */
+}
+
+/* Style for the popup header */
+.popup h2 {
+    margin: 10px 0 20px; /* Top and bottom margin */
+}
+
+/* Style for call-to-action (CTA) button inside popup */
+.popup .cta {
+    margin-top: 40px; /* Add space above the button */
+}
+
+/* Style for close button in the popup (a red circular button) */
+.popup .close {
+    width: 80px; /* Set width of the button */
+    height: 80px; /* Set height of the button */
+    background: #FF3300 url(img/close.png) no-repeat center center; /* Red background with close icon */
+    background-size: 50%; /* Resize icon */
+    position: absolute; /* Absolute positioning */
+    top: -40px; /* Position it slightly above the popup */
+    right: -40px; /* Position it slightly to the right */
+    border-radius: 50%; /* Make it circular */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    overflow: hidden; /* Hide anything outside the circular boundary */
+    text-indent: -999px; /* Hide text inside the button */
+    cursor: pointer; /* Change cursor to pointer when hovered */
+}
+
+/* Ensure rows inside popup are cleared after floating elements */
+.popup .row {
+    
+}
+
+.popup .row:after {
+    content: ''; /* Empty content */
+    display: table; /* Make it behave as a block element */
+    clear: both; /* Clear floating elements */
+}
+
+/* Style for individual items (input fields) inside the popup */
+.popup .item {
+    float: left; /* Float to the left */
+    width: 415px; /* Set width of the input field */
+    margin-left: 40px; /* Add space between items */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style for the first item to remove the left margin */
+.popup .item:first-child {
+    margin-left: 0; /* No left margin */
+}
+
+/* Style for labels inside input fields */
+.popup .item label {
+    display: block; /* Make it a block element */
+    font-size: 20px; /* Set font size */
+    font-weight: bold; /* Make label text bold */
+    margin-bottom: 10px; /* Add space below label */
+}
+
+/* Style for text input fields inside popup */
+.popup .item input[type='text'] {
+    display: block; /* Make it a block element */
+    font-size: 30px; /* Set font size */
+    font-weight: bold; /* Make input text bold */
+    border: 4px solid #111111; /* Set dark border */
+    height: 70px; /* Set input height */
+    box-sizing: border-box; /* Include padding in width/height */
+    width: 100%; /* Make input fill the container */
+    padding: 15px 20px; /* Padding inside input field */
 }
