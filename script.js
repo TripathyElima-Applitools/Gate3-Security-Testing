@@ -19,7 +19,7 @@ function openInNewTab() {
 }
 
 // Modified fetch function to fetch test plans from a server endpoint
-function fetchTestPlans() {
+function fetchQUIZResults() {
     fetch('http://localhost:3000/testplans') // Send a GET request to fetch data from the given endpoint
         .then((response) => response.json()) // Parse the response as JSON
         .then((data) => {
