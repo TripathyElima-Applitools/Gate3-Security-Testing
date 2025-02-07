@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const https = require('https');
 const cors = require('cors');
+require('dotenv').config();  // Load environment variables from .env file
 
 // Initialize express app
 const app = express();
@@ -10,10 +11,10 @@ const port = 3000;
 // Enable CORS for all origins (you can restrict to specific domains if needed)
 app.use(cors());
 
-// Replace with your TestRail domain and API credentials
-const API_URL = "https://ellisdontestpractices.testrail.io/index.php?/api/v2/get_runs/35"; // Replace with your project ID
-const USERNAME = "automationeditor@ellisdon.com";  // Your TestRail username
-const API_KEY = "iRoXKxHnBgoIHorVO5sj-hdIjlHLb3CVISeyWoJMM";  // Your TestRail API key
+// Load API credentials from environment variables
+const API_URL = process.env.Testrail_URL;  // Fetch from .env
+const USERNAME = process.env.Testrail_Username;  // Fetch from .env
+const API_KEY = process.env.Testrail_ApiKey;  // Fetch from .env
 
 // Set up an httpsAgent to handle SSL certificate issues
 const agent = new https.Agent({
