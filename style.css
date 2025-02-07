@@ -43,7 +43,7 @@ p {
 }
 
 /* Hero banner styling */
-.hero-banner {
+.security-banner {
   background-color: #007fff; /* Blue background */
   min-height: 100vh; /* Full viewport height */
   padding: 50px 20px; /* Padding around */
@@ -53,7 +53,7 @@ p {
 }
 
 /* Hero banner content alignment */
-.hero-banner .wrapper {
+.security-banner .wrapper {
   height: 464px; /* Fixed height */
   position: absolute; /* Absolute positioning */
   top: 50%; /* Center vertically */
@@ -63,18 +63,18 @@ p {
 }
 
 /* Hero section heading styles */
-.hero-banner h1 {
+.security-banner h1 {
   color: white; /* White text */
   margin: 14px 0 20px; /* Margin around the heading */
 }
 
-.hero-banner h3 {
+.security-banner h3 {
   color: white; /* White text */
   margin: 0 0 35px; /* Margin at bottom */
 }
 
-.hero-banner h4,
-.hero-banner h4 a {
+.security-banner h4,
+.security-banner h4 a {
   color: white; /* White text */
   margin: 0; /* No margin */
 }

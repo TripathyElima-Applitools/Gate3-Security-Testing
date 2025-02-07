@@ -1,3 +1,33 @@
+// Modify the API URL to point to your local proxy server
+const API_URL = "http://localhost:3000/api/testruns"; // Your proxy server endpoint
+
+// Function to fetch and display all Test Plans data
+function fetchQUIZResults() {
+    fetch(API_URL)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Parse the JSON response
+        })
+        .then(data => {
+            displayTestPlans(data); // Display the fetched test plans data
+            console.log(data); // Log the response data
+        })
+        .catch(error => {
+            console.error('Error fetching Test Plans:', error);
+        });
+}
+
+// Function to display the fetched test plans (you can modify this function to suit your needs)
+function displayTestPlans(testPlans) {
+    // Here you can process and display the test plans data on your web page
+    console.log(testPlans);
+}
+
+// Call the function to fetch test plans data
+fetchTestPlans();
+
 // Function to show the popup by adding the 'show' class to the element with ID 'popup'
 function showPopup() {
     var popup = document.getElementById('popup'); // Get the popup element
@@ -18,14 +48,4 @@ function openInNewTab() {
     ); // Open the URL in a new browser tab
 }
 
-// Modified fetch function to fetch test plans from a server endpoint
-function fetchQUIZResults() {
-    fetch('http://localhost:3000/testplans') // Send a GET request to fetch data from the given endpoint
-        .then((response) => response.json()) // Parse the response as JSON
-        .then((data) => {
-            displayTestPlans(data); // Call the displayTestPlans function with the received data
-        })
-        .catch((error) => {
-            console.error('Error fetching Test Plans:', error); // Log any errors to the console
-        });
-}
+
