@@ -79,38 +79,6 @@ p {
   margin: 0; /* No margin */
 }
 
-/* Character image positions in hero banner */
-.character1 {
-  background: url(img/character1.png) no-repeat 0 0; /* Character image */
-  background-size: 100%; /* Image size adjusts to container */
-  width: 363px; /* Fixed width */
-  height: 344px; /* Fixed height */
-  position: absolute;
-  top: 10%;
-  right: 10%; /* Positioned in top-right */
-  transform: rotate(15deg); /* Rotate the image */
-}
-
-.character2 {
-  background: url(img/character2.png) no-repeat 0 0; /* Character image */
-  background-size: 100%; /* Image size adjusts to container */
-  width: 309px; /* Fixed width */
-  height: 371px; /* Fixed height */
-  position: absolute;
-  top: 213px;
-  right: 277px; /* Positioned in the middle-right */
-}
-
-.character3 {
-  background: url(img/character3.png) no-repeat 0 0; /* Character image */
-  background-size: 100%; /* Image size adjusts to container */
-  width: 297px; /* Fixed width */
-  height: 286px; /* Fixed height */
-  position: absolute;
-  bottom: 74px;
-  right: 109px; /* Positioned in bottom-right */
-}
-
 /* Styling for call-to-action buttons */
 a.cta,
 button.cta {
@@ -307,14 +275,13 @@ nav ul li a {
   position: absolute; /* Position relative to the list item */
   width: 54px; /* Width of the hand image */
   height: 60px; /* Height of the hand image */
-  background: url(img/hand.png) no-repeat 0 0; /* Hand icon image */
   background-size: 100%; /* Scale the image to fit */
   bottom: -30px; /* Position it below the list item */
   left: 60%; /* Position it to the right side of the list item */
 }
 
 /* Center align the gang image */
-.security-testing {
+.securityTesting {
   display: block; /* Make it a block element */
   margin: 0 auto; /* Center horizontally */
 }
