@@ -411,74 +411,79 @@ footer a {
   width: 100%; /* Make input fill the container */
   padding: 15px 20px; /* Padding inside input field */
 }
-  /* Style for the loading indicator */
-  #loading {
-    display: none;
-    font-size: 24px;
-    font-weight: bold;
+/* Style for the loading indicator */
+/* Hides the loading message initially */
+#loading {
+  display: none; /* Hides the loading indicator */
+  font-size: 24px; /* Sets the font size */
+  font-weight: bold; /* Makes the text bold */
 }
 
 /* Button style to load test runs */
 #loadIframeBtn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 10px 20px; /* Adds padding inside the button */
+  background-color: #007bff; /* Sets a blue background color */
+  color: white; /* Sets the text color to white */
+  border: none; /* Removes the border */
+  border-radius: 5px; /* Rounds the corners of the button */
+  font-size: 16px; /* Sets the font size of the button text */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  margin-top: 20px; /* Adds space above the button */
+  display: block; /* Makes the button a block element (takes up full width) */
+  text-align: center; /* Centers the text inside the button */
+  margin-left: auto; /* Centers the button horizontally */
+  margin-right: auto; /* Centers the button horizontally */
 }
 
-/* Add hover effect to the button */
+/* Hover effect to change the button's background color */
 #loadIframeBtn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3; /* Darkens the background color on hover */
 }
 
 /* Styling for the content section at the bottom */
 #content {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 2px solid #ddd;
-    display: none;
-    position: relative;
+  margin-top: 50px; /* Adds space above the content */
+  padding: 20px; /* Adds padding inside the content */
+  background-color: #f8f9fa; /* Sets a light background color */
+  border-top: 2px solid #ddd; /* Adds a border at the top of the content */
+  display: none; /* Hides the content initially */
+  position: relative; /* Positions the content relative to its normal position */
 }
 
 /* Close icon style */
 #closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #007bff;
-    cursor: pointer;
-    background: none;
-    border: none;
+  position: absolute; /* Positions the close button absolutely */
+  top: 10px; /* Places the button 10px from the top */
+  right: 10px; /* Places the button 10px from the right */
+  font-size: 24px; /* Sets the font size of the close icon */
+  color: #007bff; /* Sets the color to blue */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  background: none; /* Removes any background */
+  border: none; /* Removes the border */
 }
 
 /* Styling for individual test runs */
 .test-run {
-    margin-bottom: 20px;
+  margin-bottom: 20px; /* Adds space below each test run */
 }
 
+/* Styling for different test run statuses */
 .status {
-    font-weight: bold;
-    color: green;
+  font-weight: bold; /* Makes the status text bold */
+  color: green; /* Default color for completed status */
 }
 
+/* Specific color for 'in-progress' status */
 .status.in-progress {
-    color: orange;
+  color: orange; /* Sets the color to orange for in-progress */
 }
 
+/* Specific color for 'completed' status */
 .status.completed {
-    color: green;
+  color: green; /* Sets the color to green for completed */
 }
 
+/* Specific color for 'failed' status */
 .status.failed {
-    color: red;
+  color: red; /* Sets the color to red for failed */
 }
