@@ -36,7 +36,7 @@
       <a href="#" class="logo">Gate3 Pen Testing</a>
       <ul>
         <li>
-          <a target="_blank" href="https://tripathyelima1989.github.io/TestRail-API/index.html">ASSESSMENT RESULT</a>
+          <a href="#" onclick="loadTestRuns()">ASSESSMENT RESULT</a>
         </li>
         <li>
           <a href="#PenTest">PEN TEST</a>
@@ -47,6 +47,16 @@
       </ul>
       <!-- Unordered list for the navigation menu -->
     </nav>
+   <!-- Loading spinner (hidden initially) -->
+   <div id="loading">Loading...</div>
+
+    <!-- Content section at the bottom to display test runs -->
+    <div id="content">
+      <!-- Close button to hide the results -->
+      <button id="closeBtn" onclick="closeTestResults()">X</button>
+      <h3>Gate3 QA Security QUIZ Live Result</h3>
+      <div id="testRuns"></div>
+  </div>
     <!-- Gate3 Training Section with a brief description -->
     <div class="Gate3Training">
       <div class="wrapper">
@@ -97,41 +107,6 @@
         <button class="close">Close</button>
       </div>
     </footer>
-    <!-- Popup for quiz form -->
-    <div class="popup" id="popup">
-      <div class="blanket"></div>
-      <div class="content">
-        <h2>Fill In Your Details</h2>
-        <form action="">
-          <!-- Row for first name and last name inputs -->
-          <div class="row">
-            <div class="item">
-              <label>Your First Name</label>
-              <input type="text" placeholder="Awesomeface" value="QA Name" />
-            </div>
-            <div class="item">
-              <label>Your Last Name</label>
-              <input type="text" placeholder="" />
-            </div>
-          </div>
-          <!-- Row for team name and module name inputs -->
-          <div class="row">
-            <div class="item">
-              <label>Team Name</label>
-              <input type="text" placeholder="Team 1" />
-            </div>
-            <div class="item">
-              <label>Module Name</label>
-              <input type="text" placeholder="Communications" />
-            </div>
-          </div>
-          <!-- Submit button for quiz form -->
-          <button class="cta" onclick="openInNewTab();">START QUIZ</button>
-        </form>
-        <!-- Close button for the popup -->
-        <button class="close" onclick="hidePopup();">Close</button>
-      </div>
-    </div>
     <!-- Linking the JavaScript file to handle dynamic behaviors (like showing and hiding the popup) -->
     <script src="script.js" type="text/javascript"></script>
   </body>

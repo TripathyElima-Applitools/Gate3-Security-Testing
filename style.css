@@ -7,6 +7,7 @@ html {
   font-family: "Open Sans", sans-serif; /* Set default font to Open Sans */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin */
+  scroll-behavior: smooth;
 }
 
 /* Heading styling */
@@ -409,4 +410,75 @@ footer a {
   box-sizing: border-box; /* Include padding in width/height */
   width: 100%; /* Make input fill the container */
   padding: 15px 20px; /* Padding inside input field */
+}
+  /* Style for the loading indicator */
+  #loading {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Button style to load test runs */
+#loadIframeBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add hover effect to the button */
+#loadIframeBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the content section at the bottom */
+#content {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #ddd;
+    display: none;
+    position: relative;
+}
+
+/* Close icon style */
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Styling for individual test runs */
+.test-run {
+    margin-bottom: 20px;
+}
+
+.status {
+    font-weight: bold;
+    color: green;
+}
+
+.status.in-progress {
+    color: orange;
+}
+
+.status.completed {
+    color: green;
+}
+
+.status.failed {
+    color: red;
 }
