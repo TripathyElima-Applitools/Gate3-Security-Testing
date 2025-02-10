@@ -55,3 +55,11 @@ function closeTestResults() {
   const contentDiv = document.getElementById('content');
   contentDiv.style.display = 'none'; // Hide the test result section
 }
+
+// Function to open a specified URL in a new tab
+function openInNewTab() {
+  window.open(
+      'https://ellisdontestpractices.testrail.io/index.php?/projects/overview/35',
+      '_blank'
+  ); // Open the URL in a new browser tab
+}
